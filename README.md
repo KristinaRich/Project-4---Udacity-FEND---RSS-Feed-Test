@@ -1,6 +1,6 @@
 # Project Scope
 
-This project for the Frontend Web Development Nanodegree (Udacity) should provide tests for a web-based application that reads RSS feeds using Jasmine framework. It should contain following tests:
+This project for the Frontend Web Development Nanodegree (Udacity) should provide tests for a web-based application that reads RSS feeds using Jasmine framework. It contains following tests:
 #### RSS Feed
  * Are the feeds defined?
  * Are the feed URL defined?
@@ -13,7 +13,7 @@ This project for the Frontend Web Development Nanodegree (Udacity) should provid
  * Is the content changing?
 
 # Resources
-Udacity provided a code for the application (app.js) and an initial test code to define the feeds. In order to prepare for this task, I studied  following resources prior to write the code:
+Udacity provided the code, all neccessary files to run the application and an initial test code to define the feeds. In order to prepare for this task, I studied  following resources prior to write the code:
 
 * Tutorial by Matthew Cranford: https://matthewcranford.com/category/blog-posts/walkthrough/feed-reader/
 * Tutorial by Ryan Boris: https://www.youtube.com/watch?v=7kOBXPbDmyw
