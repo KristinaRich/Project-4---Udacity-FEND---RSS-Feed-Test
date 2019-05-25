@@ -1,5 +1,7 @@
-# Project Scope
+# Run Project
+To run this project, download or clone the repository. Open index.html in your browser (preferrably Firefox/Chrome).
 
+# Project Scope
 This project for the Frontend Web Development Nanodegree (Udacity) should provide tests for a web-based application that reads RSS feeds using Jasmine framework. It contains following tests:
 #### RSS Feed
  * Are the feeds defined?
