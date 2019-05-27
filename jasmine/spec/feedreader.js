@@ -96,28 +96,37 @@ describe ('Initial Entries', function() {
 });
 
     
-  /*KR - In this test, the initialfeed load is compared to another feed load.
+   /*KR - In this test, the initialfeed load is compared to another feed load.
    * They are not expected to be the same; on this way it can be checked if
    * the content is changing.
-   */   
-describe ('New Feed Selection', function() {
+   * After some suggestions from the reviewer - thank you very much for your
+   * valuable feedback -  I decided to rewrite the code for this part. I think
+   * on this way it is more clear to me how to work with the done function.
+   * First the loadFeed is initialized and completed and within this function,
+   * the initial feed is accessed/identified.
+   * As soon as the content is loaded again, a new feed, accessed/identified during this second load, 
+   * is compared to the initial feed.
+   */
+describe ('new Feed Selection', function() {
 
-     let feedOne, feedTwo;
+  let feedOne, feedTwo;
 
-     beforeEach(function(done) {
-        loadFeed(0, function() {
-            feedOne = document.querySelector('.feed').innerHTML;
-        });
+  beforeEach(function(done){
+     loadFeed(0, function () {
+         feedOne = document.querySelector('.feed').innerHTML;
+         done();
+     });
+ });
 
-        loadFeed(1, function() {
-            feedTwo = document.querySelector('.feed').innerHTML;
-            done();
-        });
+   it ('content changing', function(done){
+
+     loadFeed(1, function(){
+        feedTwo = document.querySelector('.feed').innerHTML;
+         expect(feedOne).not.toBe(feedTwo);
+         done();
      });
 
-      it ('content changing', function() {
-        expect(feedOne).not.toBe(feedTwo);
-      });
+ });
 });
 
 }());
