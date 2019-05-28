@@ -80,8 +80,9 @@ describe('The menu', function() {
 
   /* KR - This test checks if the feed is loaded and en enty appears.
     * It was implemented with the beforeEach and asynchronous "done" function.
-    * The feed entry element was accessed within and variable and it is checked if
-    * the entry value is empty.
+    * The feed entry element is accessed within and variable and it is checked if
+    * the length of the entry value is greater than 0. This was a hint provided in the 
+    * Udacity review and I implemented it as recommended.
   */
 describe ('Initial Entries', function() {
 
@@ -90,8 +91,8 @@ describe ('Initial Entries', function() {
       });
 
       it ('loadFeed contains an entry', function() {
-       let feedEntry = document.querySelector('.feed .entry');
-       expect(feedEntry).not.toBe('');
+       let feedEntry = document.querySelectorAll('.feed .entry');
+       expect(feedEntry.length).toBeGreaterThan(0);
       });
 });
 
